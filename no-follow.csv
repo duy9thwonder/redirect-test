@@ -1,2 +1,143 @@
-status,old,new,status_code,actual_url,redirect_code,redirect_url
-FAIL,/fr/what-is-rebus-analytics-platform/feed/,/fr,200,/en-us,301,/fr/what-is-rebus-analytics-platform/feed
+status,old,new,status_code,actual_url,redirects
+FAIL,/contact-us/,/contact,200,/en-us/contact,/en-us/contact
+GOOD,/tag/events/feed/,/en-us,200,/en-us,/tag/events/feed -> / -> /en-us
+GOOD,/tag/modex/feed/,/en-us,200,/en-us,/tag/modex/feed -> / -> /en-us
+GOOD,/comments/feed/,/en-us,200,/en-us,/comments/feed -> / -> /en-us
+GOOD,/feed/,/en-us,200,/en-us,/feed -> / -> /en-us
+GOOD,/tag/benefits/feed/,/en-us,200,/en-us,/tag/benefits/feed -> / -> /en-us
+GOOD,/the-latest-on-rebus/feed/,/en-us,200,/en-us,/the-latest-on-rebus/feed -> / -> /en-us
+GOOD,/tag/skype/feed/,/en-us,200,/en-us,/tag/skype/feed -> / -> /en-us
+GOOD,/tag/data-security/feed/,/en-us,200,/en-us,/tag/data-security/feed -> / -> /en-us
+GOOD,/what-is-rebus-analytics-platform/feed/,/en-us,200,/en-us,/what-is-rebus-analytics-platform/feed -> / -> /en-us
+GOOD,/tag/rebus/feed/,/en-us,200,/en-us,/tag/rebus/feed -> / -> /en-us
+GOOD,/fr/tag/cost-fr/feed/,/en-us,200,/en-us,/fr/tag/cost-fr/feed -> /en-us
+GOOD,/rebus-brings-power-new-integrations/feed/,/en-us,200,/en-us,/rebus-brings-power-new-integrations/feed -> / -> /en-us
+GOOD,/tag/soc-2/feed/,/en-us,200,/en-us,/tag/soc-2/feed -> / -> /en-us
+GOOD,/tag/big-data/feed/,/en-us,200,/en-us,/tag/big-data/feed -> / -> /en-us
+GOOD,/tag/supply-chain/feed/,/en-us,200,/en-us,/tag/supply-chain/feed -> / -> /en-us
+GOOD,/tag/microsoft-office/feed/,/en-us,200,/en-us,/tag/microsoft-office/feed -> / -> /en-us
+GOOD,/tag/werc/feed/,/en-us,200,/en-us,/tag/werc/feed -> / -> /en-us
+GOOD,/tag/cost/feed/,/en-us,200,/en-us,/tag/cost/feed -> / -> /en-us
+GOOD,/supply-chain-analytics/feed/,/en-us,200,/en-us,/supply-chain-analytics/feed -> / -> /en-us
+GOOD,/why-supply-chain-analytics/feed/,/en-us,200,/en-us,/why-supply-chain-analytics/feed -> / -> /en-us
+GOOD,/fr/the-real-cost-of-manual-analytics-in-the-supply-chain/feed/,/fr,200,/fr,/fr/the-real-cost-of-manual-analytics-in-the-supply-chain/feed -> /fr
+GOOD,/fr/tag/data-security-fr/feed/,/fr,200,/fr,/fr/tag/data-security-fr/feed -> /fr
+GOOD,/tag/integrations/feed/,/en-us,200,/en-us,/tag/integrations/feed -> / -> /en-us
+GOOD,/tag/analytics/feed/,/en-us,200,/en-us,/tag/analytics/feed -> / -> /en-us
+GOOD,/fr/tag/soc-2-fr/feed/,/fr,200,/fr,/fr/tag/soc-2-fr/feed -> /fr
+GOOD,/fr/rebus-earns-soc-2-type-i-and-ii-certifications/feed/,/fr,200,/fr,/fr/rebus-earns-soc-2-type-i-and-ii-certifications/feed -> /fr
+GOOD,/fr/tag/integrations-fr/feed/,/fr,200,/fr,/fr/tag/integrations-fr/feed -> /fr
+GOOD,/fr/tag/werc-fr/feed/,/fr,200,/fr,/fr/tag/werc-fr/feed -> /fr
+GOOD,/fr/tag/big-data-fr/feed/,/fr,200,/fr,/fr/tag/big-data-fr/feed -> /fr
+GOOD,/fr/tag/modex-fr/feed/,/fr,200,/fr,/fr/tag/modex-fr/feed -> /fr
+GOOD,/fr/tag/microsoft-office-fr/feed/,/fr,200,/fr,/fr/tag/microsoft-office-fr/feed -> /fr
+GOOD,/fr/tag/skype-fr/feed/,/fr,200,/fr,/fr/tag/skype-fr/feed -> /fr
+GOOD,/fr/tag/smart-data-fr/feed/,/fr,200,/fr,/fr/tag/smart-data-fr/feed -> /fr
+GOOD,/fr/rebus-brings-power-new-integrations/feed/,/fr,200,/fr,/fr/rebus-brings-power-new-integrations/feed -> /fr
+GOOD,/fr/tag/analytics-fr/feed/,/fr,200,/fr,/fr/tag/analytics-fr/feed -> /fr
+GOOD,/fr/visit-rebus-analytics-at-modex-show-in-atlanta/feed/,/fr,200,/fr,/fr/visit-rebus-analytics-at-modex-show-in-atlanta/feed -> /fr
+GOOD,/fr/tag/rebus-fr/feed/,/fr,200,/fr,/fr/tag/rebus-fr/feed -> /fr
+GOOD,/fr/tag/benefits-fr/feed/,/fr,200,/fr,/fr/tag/benefits-fr/feed -> /fr
+GOOD,/fr/why-supply-chain-analytics/feed/,/fr,200,/fr,/fr/why-supply-chain-analytics/feed -> /fr
+FAIL,/fr/what-is-rebus-analytics-platform/,/services/software/rebus,404,/fr/what-is-rebus-analytics-platform,/fr/what-is-rebus-analytics-platform
+FAIL,/,/products/rebus-analytics,200,/en-us,/en-us
+FAIL,/privacy-policy/,/privacy,200,/en-us/privacy,/privacy-policy -> /en-us/privacy
+FAIL,/rebus-brings-power-new-integrations/,/services/software/rebus,200,/en-us/services/software/rebus,/rebus-brings-power-new-integrations -> /en-us/services/software/rebus
+FAIL,/learning/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/learning -> /en-us/products/rebus-analytics
+FAIL,/product-overview/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/product-overview -> /en-us/products/rebus-analytics
+FAIL,/getting-started/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/getting-started -> /en-us/products/rebus-analytics
+FAIL,/distribution-visibility-its-time-for-real-time/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/distribution-visibility-its-time-for-real-time -> /en-us/products/rebus-analytics
+FAIL,/rebus-analytics-at-modex-show-in-atlanta/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/rebus-analytics-at-modex-show-in-atlanta -> /en-us/products/rebus-analytics
+FAIL,/rebus-brings-in-new-vp-of-solutions-and-product-management/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/rebus-brings-in-new-vp-of-solutions-and-product-management -> /en-us/products/rebus-analytics
+FAIL,/big-data-vs-smart-data-demand-more-from-your-data/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/big-data-vs-smart-data-demand-more-from-your-data -> /en-us/products/rebus-analytics
+FAIL,/rebus-earns-soc-2-certification/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/rebus-earns-soc-2-certification -> /en-us/products/rebus-analytics
+FAIL,/the-real-cost-of-manual-analytics-in-the-supply-chain/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/the-real-cost-of-manual-analytics-in-the-supply-chain -> /en-us/products/rebus-analytics
+FAIL,/author/awakefield/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/author/awakefield -> /en-us/products/rebus-analytics
+FAIL,/2018/02/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/2018/02 -> /en-us/products/rebus-analytics
+FAIL,/the-latest-on-rebus/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/the-latest-on-rebus -> /en-us/products/rebus-analytics
+FAIL,/tag/rebus-team/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/rebus-team -> /en-us/products/rebus-analytics
+FAIL,/supply-chain-analytics/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/supply-chain-analytics -> /en-us/products/rebus-analytics
+FAIL,/tag/analytics/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/analytics -> /en-us/products/rebus-analytics
+FAIL,/tag/benefits/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/benefits -> /en-us/products/rebus-analytics
+FAIL,/tag/big-data/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/big-data -> /en-us/products/rebus-analytics
+FAIL,/tag/cost/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/cost -> /en-us/products/rebus-analytics
+FAIL,/tag/data-security/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/data-security -> /en-us/products/rebus-analytics
+FAIL,/tag/events/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/events -> /en-us/products/rebus-analytics
+FAIL,/tag/integrations/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/integrations -> /en-us/products/rebus-analytics
+FAIL,/tag/microsoft-office/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/microsoft-office -> /en-us/products/rebus-analytics
+FAIL,/tag/modex/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/modex -> /en-us/products/rebus-analytics
+FAIL,/tag/rebus/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/rebus -> /en-us/products/rebus-analytics
+FAIL,/tag/skype/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/skype -> /en-us/products/rebus-analytics
+FAIL,/tag/smart-data/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/smart-data -> /en-us/products/rebus-analytics
+FAIL,/tag/soc-2/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/soc-2 -> /en-us/products/rebus-analytics
+FAIL,/tag/supply-chain/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/supply-chain -> /en-us/products/rebus-analytics
+FAIL,/tag/werc/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/tag/werc -> /en-us/products/rebus-analytics
+FAIL,/2018/03/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/2018/03 -> /en-us/products/rebus-analytics
+FAIL,/2018/04/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/2018/04 -> /en-us/products/rebus-analytics
+FAIL,/2018/01/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/2018/01 -> /en-us/products/rebus-analytics
+FAIL,/what-is-rebus-analytics-platform/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/what-is-rebus-analytics-platform -> /en-us/products/rebus-analytics
+FAIL,/author/dezignhive/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/author/dezignhive -> /en-us/products/rebus-analytics
+FAIL,/fr/rebus-earns-soc-2-type-i-and-ii-certifications/,/products/rebus-analytics,404,/fr/rebus-earns-soc-2-type-i-and-ii-certifications,/fr/rebus-earns-soc-2-type-i-and-ii-certifications
+FAIL,/2016/08/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/2016/08 -> /en-us/products/rebus-analytics
+FAIL,/why-supply-chain-analytics/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/why-supply-chain-analytics -> /en-us/products/rebus-analytics
+FAIL,/2017/04/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/2017/04 -> /en-us/products/rebus-analytics
+FAIL,/2016/09/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/2016/09 -> /en-us/products/rebus-analytics
+FAIL,/2017/01/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/2017/01 -> /en-us/products/rebus-analytics
+FAIL,/2017/12/,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/2017/12 -> /en-us/products/rebus-analytics
+GOOD,/email-disclaimer,/en-us,200,/en-us,/ -> /en-us
+FAIL,/why-choose-us,/services/consulting-services/systems-implementation,200,/en-us/company/why-longbow,/en-us/company/why-longbow
+FAIL,/labor/,/products/rebus-labor,200,/en-us/products/rebus-labor,/labor -> /en-us/products/rebus-labor
+GOOD,/my-calendar,/en-us,200,/en-us,/ -> /en-us
+FAIL,/why-choose-us/,/services/consulting-services/systems-implementation,200,/en-us/company/why-longbow,/why-choose-us -> /en-us/company/why-longbow
+FAIL,/labor-management-implementation,/services/consulting-services/systems-implementation,200,/en-us/services/consulting-services/systems-implementation,/en-us/services/consulting-services/systems-implementation
+FAIL,/system-integration,/services/consulting-services/systems-implementation,200,/en-us/services/consulting-services/systems-implementation,/en-us/services/consulting-services/systems-implementation
+FAIL,/wms-implementation,/services/consulting-services/systems-implementation,200,/en-us/services/consulting-services/systems-implementation,/en-us/services/consulting-services/systems-implementation
+FAIL,/wms-implementation/,/services/consulting-services/systems-implementation,200,/en-us/services/consulting-services/systems-implementation,/wms-implementation -> /en-us/services/consulting-services/systems-implementation
+FAIL,/system-integration/,/services/consulting-services/systems-implementation,200,/en-us/services/consulting-services/systems-implementation,/system-integration -> /en-us/services/consulting-services/systems-implementation
+GOOD,/shelfware-services,/en-us,200,/en-us,/ -> /en-us
+GOOD,/upgrades,/en-us,200,/en-us,/ -> /en-us
+GOOD,/upgrades/,/en-us,200,/en-us,/upgrades -> / -> /en-us
+GOOD,/shelfware/,/en-us,200,/en-us,/shelfware -> / -> /en-us
+GOOD,/special-projects,/en-us,200,/en-us,/ -> /en-us
+FAIL,/project-management,/services/consulting-services/solution-design,200,/en-us/services/consulting-services/solution-design,/en-us/services/consulting-services/solution-design
+FAIL,/sitemap,/Sitemap-xml,200,/en-us/sitemap-xml,/en-us/sitemap-xml
+FAIL,/project-management/,/services/consulting-services/solution-design,200,/en-us/services/consulting-services/solution-design,/project-management -> /en-us/services/consulting-services/solution-design
+GOOD,/special-projects/,/en-us,200,/en-us,/special-projects -> / -> /en-us
+FAIL,/services,/services,200,/en-us/services,/en-us/services
+FAIL,/services/,/services,200,/en-us/services,/services -> /en-us/services
+FAIL,/rebus-analytics-implementation,/products/rebus-analytics,200,/en-us/products/rebus-analytics,/en-us/products/rebus-analytics
+FAIL,/privacy,/privacy,200,/en-us/privacy,/en-us/privacy
+FAIL,/our-team,/company/our-team,200,/en-us/company/our-team,/en-us/company/our-team
+FAIL,/category/newsroom,/company/news,200,/en-us/company/news,/en-us/company/news
+FAIL,/newsletter,/company/news,200,/en-us/company/news,/en-us/company/news
+FAIL,/category/newsroom/page/2,/company/news,200,/en-us/company/news,/en-us/company/news
+FAIL,/newsroom,/company/news,200,/en-us/company/news,/en-us/company/news
+FAIL,/category/newsroom/page/3,/company/news,200,/en-us/company/news,/en-us/company/news
+FAIL,/fr/newsletter-fr,/company/news,200,/en-us/company/news,/en-us/company/news
+FAIL,/executive-team,/company/leadership,200,/en-us/company/leadership,/en-us/company/leadership
+FAIL,/jda-training,/services/software/jda,200,/en-us/services/software/jda,/en-us/services/software/jda
+FAIL,/redprairie-wms,/services/software/jda,200,/en-us/services/software/jda,/en-us/services/software/jda
+FAIL,/labor-management-implementation/,/services/systems/labor-management,200,/en-us/services/consulting-services/systems-implementation,/labor-management-implementation -> /en-us/services/consulting-services/systems-implementation
+FAIL,/jda-training/,/services/software/jda,200,/en-us/services/software/jda,/jda-training -> /en-us/services/software/jda
+GOOD,/fr/feed,/fr,200,/fr,/fr
+GOOD,/fr/category/case-studies-fr/feed,/fr,200,/fr,/fr
+FAIL,/fr/comments/feed,/fr,200,/en-us,/en-us
+GOOD,/fr/category/white-papers-fr/feed,/fr,200,/fr,/fr
+GOOD,/fr/category/checklists-fr/feed,/fr,200,/fr,/fr
+GOOD,/fr/category/newsroom-fr/feed,/fr,200,/fr,/fr
+GOOD,/,/en-us,200,/en-us,/en-us
+GOOD,/feed,/en-us,200,/en-us,/ -> /en-us
+GOOD,/category/newsroom/feed,/en-us,200,/en-us,/ -> /en-us
+GOOD,/comments/feed,/en-us,200,/en-us,/ -> /en-us
+GOOD,/category/checklists/feed,/en-us,200,/en-us,/ -> /en-us
+GOOD,/category/white-papers/feed,/en-us,200,/en-us,/ -> /en-us
+FAIL,/clients,/customers,200,/en-us/customers,/en-us/customers
+FAIL,/contact,/contact,200,/en-us/contact,/en-us/contact
+FAIL,/testimonials,/customers,200,/en-us/customers,/en-us/customers
+FAIL,/contact/,/contact,200,/en-us/contact,/en-us/contact
+FAIL,/about-longbow,/company,200,/en-us/company,/en-us/company
+FAIL,/jda-redprairie-hosting,/services/consulting-services/cloud-services,200,/en-us/services/consulting-services/cloud-services,/en-us/services/consulting-services/cloud-services
+FAIL,/about-longbow/,/company,200,/en-us/company,/about-longbow -> /en-us/company
+FAIL,/jda-redprairie-hosting/,/services/consulting-services/cloud-services,200,/en-us/services/consulting-services/cloud-services,/jda-redprairie-hosting -> /en-us/services/consulting-services/cloud-services
+FAIL,/careers,/company/careers,200,/en-us/company/careers,/en-us/company/careers
+FAIL,/wms-assessment,/services/consulting-services/assessment,200,/en-us/services/consulting-services/assessment,/en-us/services/consulting-services/assessment

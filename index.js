@@ -36,12 +36,10 @@ const q = async.queue((urls, cb) => {
   
   
   request(options, (err, res) => {
-    // console.log( JSON.stringify(res.request));
     if (err) {
       cb(`Error: ${err}`, null);
     } else {
       if (res.statusCode === 301) {
-        console.log('301');
         const locPath = URL.parse(res.headers.location).pathname;
         if (locPath !== urls[1]) {
           update = {
@@ -53,21 +51,25 @@ const q = async.queue((urls, cb) => {
         }
       } else {
         var actualURL = URL.parse(res.request.href).pathname;
-        var statusResult = (urls[1] == actualURL?'GOOD':'FAIL');
-        var logString = ' '+statusResult +' ### '+ urls[0]+' => '+res.statusCode + ' ( '+actualURL +' )';
-        if(res.request._redirect.redirects.length>0){
-          logString += JSON.stringify(res.request._redirect.redirects)+' ';
+        var logString = '';
+        if(urls[1] == actualURL){
+          logString = 'GOOD ### '+ urls[0]+' => '+actualURL;
+        }else{
+          logString = 'FAIL ### '+ siteUrl+urls[0]+' != '+actualURL +' ('+res.statusCode+')';
         }
+        
+        var shortRedirectStr = parseRedirectObj(res.request._redirect.redirects,siteUrl);
+        logString += ' \nCHAINS: '+urls[0]+' '+shortRedirectStr;
+        
         
         console.log(logString);
         update = {
-          status:statusResult,
+          status:(urls[1] == actualURL)?'GOOD':'FAIL',
           old: urls[0],
           new: urls[1],
           status_code: res.statusCode,
           actual_url: actualURL,
-          redirect_code:res.request._redirect.redirects[0]?res.request._redirect.redirects[0].statusCode:'',
-          redirect_url:res.request._redirect.redirects[0]?res.request._redirect.redirects[0].redirectUri.replace(siteUrl,''):''
+          redirects:shortRedirectStr
         };
       }
       if (update) {
@@ -120,6 +122,15 @@ function readFile(file) {
       parseCsv(contents);
     }
   });
+}
+
+function parseRedirectObj(redirectObj,replaceURL){
+  var returnString = '';
+  redirectObj.forEach(element => {
+    // console.log(element);
+    returnString+=' -> '+element.redirectUri.replace(replaceURL,'');
+  });
+  return returnString;
 }
 
 program
