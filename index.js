@@ -33,12 +33,15 @@ const spinner = ora({ spinner: 'dots2', text: `Making HTTP(S) requests with conc
 const q = async.queue((urls, cb) => {
   let update;
   options.url = siteUrl + urls[0];
+  
+  
   request(options, (err, res) => {
-    // console.log(res.request._redirect.redirects);
+    // console.log( JSON.stringify(res.request));
     if (err) {
       cb(`Error: ${err}`, null);
     } else {
       if (res.statusCode === 301) {
+        console.log('301');
         const locPath = URL.parse(res.headers.location).pathname;
         if (locPath !== urls[1]) {
           update = {
@@ -50,7 +53,13 @@ const q = async.queue((urls, cb) => {
         }
       } else {
         var actualURL = URL.parse(res.request.href).pathname;
-        var statusResult = (urls[1] == actualURL?'OK':'FAIL');
+        var statusResult = (urls[1] == actualURL?'GOOD':'FAIL');
+        var logString = ' '+statusResult +' ### '+ urls[0]+' => '+res.statusCode + ' ( '+actualURL +' )';
+        if(res.request._redirect.redirects.length>0){
+          logString += JSON.stringify(res.request._redirect.redirects)+' ';
+        }
+        
+        console.log(logString);
         update = {
           status:statusResult,
           old: urls[0],
