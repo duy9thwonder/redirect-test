@@ -25,6 +25,7 @@ const options = {
 }
 const errorCodes = /4[0-9][0-3|5-9]|5[0-9][0-9]/g;
 const updatedCSV = [];
+var isError = false;
 const error = chalk.bold.red;
 const good = chalk.bold.green;
 const concurrency = program.number || 5;
@@ -55,6 +56,7 @@ const q = async.queue((urls, cb) => {
         if(urls[1] == actualURL){
           logString = 'GOOD ### '+ urls[0]+' => '+actualURL;
         }else{
+          isError = true;
           logString = 'FAIL ### '+ siteUrl+urls[0]+' != '+urls[1]+' ('+res.statusCode+')';
         }
         
@@ -80,7 +82,7 @@ const q = async.queue((urls, cb) => {
       } else {
         cb(null, res);
       }
-    }
+    } 
   });
 }, concurrency);
 
@@ -90,6 +92,7 @@ q.error = (err) => {
 };
 
 q.drain = () => {
+  
   if (_.isEmpty(updatedCSV) && !program.quiet) {
     spinner.succeed(good('All links look good.'));
     spinner.succeed(good('No errors so nothing written to the csv file'));
@@ -99,6 +102,13 @@ q.drain = () => {
   } else if (program.quiet) {
     spinner.stop();
     writeCSV(program.csv, updatedCSV);
+  }
+  if(isError){
+    console.log('Found some fail test cases');
+    setTimeout(function () {
+      process.exit(1);
+    }, 2000); 
+    
   }
 };
 

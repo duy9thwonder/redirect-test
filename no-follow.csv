@@ -1,2 +1,2 @@
 status,old,new,status_code,actual_url,redirects
-FAIL,/contact-us/,/contact,200,/en-us/contact, -> /en-us/contact
+GOOD,/tag/benefits/feed/,/en-us,200,/en-us, -> /tag/benefits/feed -> / -> /en-us
