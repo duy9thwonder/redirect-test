@@ -55,7 +55,7 @@ const q = async.queue((urls, cb) => {
         if(urls[1] == actualURL){
           logString = 'GOOD ### '+ urls[0]+' => '+actualURL;
         }else{
-          logString = 'FAIL ### '+ siteUrl+urls[0]+' != '+actualURL +' ('+res.statusCode+')';
+          logString = 'FAIL ### '+ siteUrl+urls[0]+' != '+urls[1]+' ('+res.statusCode+')';
         }
         
         var shortRedirectStr = parseRedirectObj(res.request._redirect.redirects,siteUrl);
