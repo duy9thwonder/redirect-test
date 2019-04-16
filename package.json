@@ -1,5 +1,5 @@
 {
-  "name": "redirect-test",
+  "name": "redirect-checker",
   "version": "1.1.2",
   "description": "Test your web server redirects for the correct status code.",
   "main": "index.js",

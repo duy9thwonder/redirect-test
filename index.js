@@ -21,7 +21,7 @@ const options = {
   headers: {
     'User-Agent': `Redirect Tester v${pkgVersion}`,
   },
-  followRedirect: false,
+  followRedirect: true
 }
 const errorCodes = /4[0-9][0-3|5-9]|5[0-9][0-9]/g;
 const updatedCSV = [];
@@ -34,6 +34,7 @@ const q = async.queue((urls, cb) => {
   let update;
   options.url = siteUrl + urls[0];
   request(options, (err, res) => {
+    // console.log(res.request._redirect.redirects);
     if (err) {
       cb(`Error: ${err}`, null);
     } else {
@@ -48,11 +49,16 @@ const q = async.queue((urls, cb) => {
           };
         }
       } else {
+        var actualURL = URL.parse(res.request.href).pathname;
+        var statusResult = (urls[1] == actualURL?'OK':'FAIL');
         update = {
+          status:statusResult,
           old: urls[0],
           new: urls[1],
           status_code: res.statusCode,
-          actual_url: '',
+          actual_url: actualURL,
+          redirect_code:res.request._redirect.redirects[0]?res.request._redirect.redirects[0].statusCode:'',
+          redirect_url:res.request._redirect.redirects[0]?res.request._redirect.redirects[0].redirectUri.replace(siteUrl,''):''
         };
       }
       if (update) {

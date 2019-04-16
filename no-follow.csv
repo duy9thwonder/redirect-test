@@ -1,0 +1,3 @@
+status,old,new,status_code,actual_url,redirect_code,redirect_url
+FAIL,/aaaaaa,/contact,404,/aaaaaa,,
+OK,/en-us/contact,/en-us/contact,200,/en-us/contact,,
